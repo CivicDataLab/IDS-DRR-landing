@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      IDS-DRR — Intelligent Data Solution for Disaster Risk Reduction
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "ds-dark": "#222136",
+              "ds-green": "#D7F0DA",
+              "ds-grey": "#F6F6F7",
+              "ds-white": "#FFFFFF",
+              "ds-blue": "#2C6ECB",
+              "ds-gold": "#FFC152",
+              "ds-amber": "#FFC96B",
+              "ds-text": "#202223",
+              "ds-subdued": "#6D7175",
+              "ds-card": "#F1F2F3",
+              "ds-feat": "#FFF4F4",
+            },
+            fontFamily: {
+              noto: ['"Noto Sans"', "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ══════════════════ NAVBAR ══════════════════ -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="logo-block">
+          <span class="logo-name">IDS-DRR</span>
+          <span class="logo-sub"
+            >Intelligent Data Solution for Disaster Risk Reduction</span
+          >
+        </a>
+
+        <div class="nav-links">
+          <a href="#what-is" class="nav-link">What is IDS-DRR</a>
+          <a href="#deploy" class="nav-link">Deploy IDS-DRR</a>
+          <a href="#repositories" class="nav-link">Open Source Repositories</a>
+          <a
+            href="https://github.com/CivicDataLab/IDS-DRR"
+            target="_blank"
+            class="btn-blue"
+          >
+            Contribute on GitHub
+            <i class="ti ti-brand-github"></i>
+          </a>
+        </div>
+
+        <button
+          id="mob-btn"
+          aria-label="Menu"
+          onclick="document.getElementById('mob-menu').classList.toggle('open')"
+        >
+          <i class="ti ti-menu-2"></i>
+        </button>
+      </div>
+      <div id="mob-menu">
+        <a href="#what-is" onclick="this.parentElement.classList.remove('open')"
+          >What is IDS-DRR</a
+        >
+        <a href="#deploy" onclick="this.parentElement.classList.remove('open')"
+          >Deploy IDS-DRR</a
+        >
+        <a
+          href="#repositories"
+          onclick="this.parentElement.classList.remove('open')"
+          >Open Source Repositories</a
+        >
+        <a href="https://github.com/CivicDataLab/IDS-DRR" target="_blank"
+          >Contribute on GitHub ↗</a
+        >
+      </div>
+    </nav>
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section id="hero" class="scroll-target">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-h1">
+            Intelligent Data Solution for Disaster Risk Reduction
+          </h1>
+          <p class="hero-sub">
+            An open-source, modular platform that enables governments,
+            researchers, and organizations to build data-driven disaster risk
+            reduction systems for any geography.
+          </p>
+          <div class="hero-btns">
+            <a
+              href="https://github.com/CivicDataLab/IDS-DRR"
+              target="_blank"
+              class="btn-blue"
+            >
+              View on GitHub
+              <i class="ti ti-brand-github"></i>
+            </a>
+            <a
+              href="https://github.com/CivicDataLab/IDS-DRR-Frontend/blob/dev/README.md"
+              target="_blank"
+              class="btn-blue"
+            >
+              Developers Documentation
+              <i class="ti ti-external-link"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product screenshot -->
+        <div class="hero-img">
+          <img
+            src="assets/hero.png"
+            alt="IDS-DRR platform showing analytics dashboard with flood risk map of Assam"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ WHAT IS IDS-DRR ══════════════════ -->
+    <section id="what-is" class="scroll-target">
+      <div class="section-wrap">
+        <div class="section-header">
+          <h2 class="section-title">What is IDS-DRR?</h2>
+          <p class="what-desc">
+            The Intelligent Data Solution for Disaster Risk Reduction (IDS-DRR)
+            is an open-source framework for building disaster intelligence
+            platforms. It enables governments and development organizations to
+            integrate diverse datasets, including hazard information,
+            environmental indicators, socio-economic data, infrastructure,
+            public expenditure, procurement, and historical disaster impacts,
+            into a unified decision-support system.
+          </p>
+          <p class="what-desc">
+            Rather than being limited to a single country or hazard, IDS-DRR is
+            designed as a reusable architecture that can be configured for
+            different regions, disaster types, and institutional needs.
+            Organizations can customize datasets, analytical models, and
+            visualizations while leveraging the same open technology stack.
+          </p>
+        </div>
+
+        <div class="feat-cards">
+          <!-- Modular Architecture -->
+          <div class="feat-card">
+            <i class="ti ti-layout-grid feat-icon icon-green"></i>
+            <div class="feat-label">Modular Architecture</div>
+            <div class="feat-desc">Deploy only the components you need.</div>
+          </div>
+
+          <!-- Open Data -->
+          <div class="feat-card">
+            <i class="ti ti-database feat-icon icon-green"></i>
+            <div class="feat-label">Open Data</div>
+            <div class="feat-desc">Integrate public and local datasets.</div>
+          </div>
+
+          <!-- Analytics Ready -->
+          <div class="feat-card">
+            <i class="ti ti-chart-bar feat-icon icon-green"></i>
+            <div class="feat-label">Analytics Ready</div>
+            <div class="feat-desc">
+              Generate insights for preparedness and resilience.
+            </div>
+          </div>
+
+          <!-- Globally Deployable -->
+          <div class="feat-card">
+            <i class="ti ti-world-check feat-icon icon-green"></i>
+            <div class="feat-label">Globally Deployable</div>
+            <div class="feat-desc">
+              Adaptable for countries, regions, and cities.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ DEPLOY ══════════════════ -->
+    <section id="deploy" class="scroll-target">
+      <div class="section-wrap">
+        <div class="section-header--tight">
+          <h2 class="section-title">Deploy IDS-DRR</h2>
+          <p class="section-sub">
+            Explore installation guides, technical documentation, APIs, and
+            deployment resources to launch IDS-DRR in your region.
+          </p>
+        </div>
+
+        <div class="deploy-wrap">
+          <!-- Row 1 -->
+          <div class="deploy-row">
+            <div class="deploy-left">
+              <i class="ti ti-rocket deploy-icon icon-green"></i>
+              <div class="deploy-text-block">
+                <span class="deploy-title">Deployment Guide</span>
+                <span class="deploy-sub"
+                  >Infrastructure and deployment instructions.</span
+                >
+              </div>
+            </div>
+            <a href="#" class="btn-read">
+              <i class="ti ti-book"></i>
+              Read Documentation
+              <i class="ti ti-chevron-right"></i>
+            </a>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="deploy-row">
+            <div class="deploy-left">
+              <i class="ti ti-server-2 deploy-icon icon-green"></i>
+              <div class="deploy-text-block">
+                <span class="deploy-title">Technical Documentation</span>
+                <span class="deploy-sub"
+                  >Architecture, APIs, and services.</span
+                >
+              </div>
+            </div>
+            <a
+              href="https://ids-drr.readthedocs.io/en/latest/platform/index.html"
+              target="_blank"
+              class="btn-read"
+            >
+              <i class="ti ti-book"></i>
+              Read Documentation
+              <i class="ti ti-chevron-right"></i>
+            </a>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="deploy-row">
+            <div class="deploy-left">
+              <i class="ti ti-database deploy-icon icon-green"></i>
+              <div class="deploy-text-block">
+                <span class="deploy-title">Data Documentation</span>
+                <span class="deploy-sub"
+                  >Datasets, schemas, metadata, and pipelines.</span
+                >
+              </div>
+            </div>
+            <a href="#" class="btn-read">
+              <i class="ti ti-book"></i>
+              Read Documentation
+              <i class="ti ti-chevron-right"></i>
+            </a>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="deploy-row">
+            <div class="deploy-left">
+              <i
+                class="ti ti-adjustments-horizontal deploy-icon icon-green"
+              ></i>
+              <div class="deploy-text-block">
+                <span class="deploy-title">Customization Guide</span>
+                <span class="deploy-sub"
+                  >Configure hazards, datasets, and requirements.</span
+                >
+              </div>
+            </div>
+            <a
+              href="https://github.com/CivicDataLab/ids-drr-branding-types"
+              target="_blank"
+              class="btn-read"
+            >
+              <i class="ti ti-book"></i>
+              Read Documentation
+              <i class="ti ti-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ REPOSITORIES ══════════════════ -->
+    <section id="repositories" class="scroll-target">
+      <div class="section-wrap">
+        <div class="section-header--tight">
+          <h2 class="section-title">Open Source Repositories</h2>
+          <p class="section-sub">
+            Every platform component is available as open source. Browse, fork,
+            and contribute to any repository.
+          </p>
+        </div>
+
+        <div class="repo-grid">
+          <!-- Frontend -->
+          <div class="repo-card">
+            <div class="repo-top">
+              <i class="ti ti-code icon-green"></i>
+              <div class="repo-label">Frontend</div>
+              <div class="repo-desc">
+                Interactive dashboards, maps, and user interface.
+              </div>
+            </div>
+            <a
+              href="https://github.com/CivicDataLab/IDS-DRR-Frontend/"
+              target="_blank"
+              class="btn-view"
+            >
+              View Repository
+              <i class="ti ti-brand-github"></i>
+            </a>
+          </div>
+
+          <!-- Backend -->
+          <div class="repo-card">
+            <div class="repo-top">
+              <i class="ti ti-server icon-green"></i>
+              <div class="repo-label">Backend</div>
+              <div class="repo-desc">
+                APIs, authentication, analytics, and platform services.
+              </div>
+            </div>
+            <a
+              href="https://github.com/CivicDataLab/IDS-DRR-Data-Management"
+              target="_blank"
+              class="btn-view"
+            >
+              View Repository
+              <i class="ti ti-brand-github"></i>
+            </a>
+          </div>
+
+          <!-- Data Pipeline -->
+          <!-- <div class="repo-card">
+            <div class="repo-top">
+              <i class="ti ti-database-import icon-green"></i>
+              <div class="repo-label">Data Pipeline</div>
+              <div class="repo-desc">
+                ETL workflows, dataset ingestion, and management.
+              </div>
+            </div>
+            <a href="https://github.com" target="_blank" class="btn-view">
+              View Repository
+              <i class="ti ti-brand-github"></i>
+            </a>
+          </div> -->
+
+          <!-- Risk Models -->
+          <div class="repo-card">
+            <div class="repo-top">
+              <i class="ti ti-chart-histogram icon-green"></i>
+              <div class="repo-label">Risk Models</div>
+              <div class="repo-desc">Disaster risk analysis and modelling.</div>
+            </div>
+            <a
+              href="https://github.com/CivicDataLab/risk-score-model-generic"
+              target="_blank"
+              class="btn-view"
+            >
+              View Repository
+              <i class="ti ti-brand-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contribute card lives inside repo section -->
+        <div class="contribute-card mt-20">
+          <div class="contrib-left">
+            <h2 class="contrib-h2">Build Disaster Resilience Together</h2>
+            <p class="contrib-p">
+              IDS-DRR is developed as an open-source Digital Public Good. We
+              welcome governments, developers, researchers, designers, and
+              organizations to improve the platform by contributing code,
+              datasets, documentation, and new ideas.
+            </p>
+          </div>
+          <div class="contrib-right">
+            <div class="check-list">
+              <div class="check-item">
+                <i class="ti ti-circle-check icon-gold"></i>
+                <span class="check-label">Improve Features</span>
+              </div>
+              <div class="check-item">
+                <i class="ti ti-circle-check icon-gold"></i>
+                <span class="check-label">Add Datasets</span>
+              </div>
+              <div class="check-item">
+                <i class="ti ti-circle-check icon-gold"></i>
+                <span class="check-label">Improve Documentation</span>
+              </div>
+              <div class="check-item">
+                <i class="ti ti-circle-check icon-gold"></i>
+                <span class="check-label">Report Issues</span>
+              </div>
+              <div class="check-item">
+                <i class="ti ti-circle-check icon-gold"></i>
+                <span class="check-label">Submit Pull Requests</span>
+              </div>
+              <div class="check-item">
+                <i class="ti ti-circle-check icon-gold"></i>
+                <span class="check-label">Deploy IDS-DRR in New Regions</span>
+              </div>
+            </div>
+            <a
+              href="https://github.com/CivicDataLab/IDS-DRR"
+              target="_blank"
+              class="btn-github"
+            >
+              Contribute on GitHub
+              <i class="ti ti-brand-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="promo-band">
+          <div class="promo-left">
+            <div class="promo-title-row">
+              <span class="promo-ids no-break">IDS-DRR</span>
+              <span class="promo-full"
+                >Intelligent Data Solution for Disaster Risk Reduction</span
+              >
+            </div>
+            <hr class="promo-divider" />
+            <p class="promo-tagline">
+              Explore an example deployment for the state of Assam, India.
+            </p>
+          </div>
+          <a
+            href="https://drr.open-contracting.in/en"
+            target="_blank"
+            class="btn-gold"
+          >
+            Visit Platform
+            <i class="ti ti-external-link"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ FOOTER ══════════════════ -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <span class="footer-logo-name">IDS-DRR</span>
+            <span class="footer-logo-sub"
+              >Intelligent Data Solution for Disaster Risk Reduction</span
+            >
+          </div>
+          <div class="footer-divider"></div>
+          <div class="footer-partners">
+            <!-- Partner placeholder: CivicDataLab logo -->
+            <div class="footer-partner-row">
+              <img
+                src="assets/cdl.png"
+                alt="CivicDataLab"
+                class="footer-partner-img"
+              />
+              <!-- Partner placeholder: Open Contracting Partnership -->
+              <img
+                src="assets/ocp.png"
+                alt="Open Contracting Partnership"
+                class="footer-partner-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <span class="footer-made">MADE WITH ❤️ IN INDIA</span>
+          <span class="footer-by"
+            >a DataSpace product by
+            <a
+              href="https://civicdatalab.in"
+              target="_blank"
+              class="footer-partner-link underline"
+              >CivicDataLab</a
+            >
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll shadow on navbar
+      const nav = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        nav.style.boxShadow =
+          window.scrollY > 10
+            ? "0 4px 20px rgba(0,0,0,0.35)"
+            : "0px 2px 2px -1px rgba(0,0,0,0.15)";
+      });
+
+      // Active nav link highlight
+      const links = document.querySelectorAll(".nav-link");
+      const sections = ["what-is", "deploy", "repositories"];
+      function setActive() {
+        let cur = "";
+        sections.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 100) cur = id;
+        });
+        links.forEach((l) => {
+          const href = l.getAttribute("href").replace("#", "");
+          l.style.opacity = href === cur ? "1" : "";
+          l.style.borderBottom = href === cur ? "2px solid #FFC152" : "";
+          l.style.paddingBottom = href === cur ? "10px" : "";
+        });
+      }
+      window.addEventListener("scroll", setActive);
+      setActive();
+    </script>
+  </body>
+</html>
